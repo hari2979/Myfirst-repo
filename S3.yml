@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Going to deploy
+  S3 Bucket using Yaml
+Resources:
+  MyS3bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: june16th-morning-3.30am
+      VersioningConfiguration:
+        Status: Enabled
