@@ -1,0 +1,12 @@
+This is user date script for EC2 machine, Simply we can input the data in that box, So the EC2 machine will be pre-installed with software which we entered as a script in user data
+
+Use Amazon Linux 2 AMI 
+
+***Script****
+#!/bin/bash
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo "Hello Welcome Krishnan Janarthanan" > /var/www/html/index.html
