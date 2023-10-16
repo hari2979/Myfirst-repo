@@ -9,3 +9,4 @@ Resources:
       BucketName: june16th-morning-3.30am
       VersioningConfiguration:
         Status: Enabled
+        #S3 Bucket.
