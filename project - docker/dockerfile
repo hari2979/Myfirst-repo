@@ -1,0 +1,14 @@
+# Use the official Ubuntu image as the base image
+FROM ubuntu:latest
+
+# Update and install necessary packages
+RUN apt-get update && apt-get install -y nginx
+
+# Copy your HTML file into the container
+COPY index.html /var/www/html/
+
+# Expose port 80 to allow access to the Nginx web server
+EXPOSE 80
+
+# Start the Nginx service when the container runs
+CMD ["nginx", "-g", "daemon off;"]
