@@ -1,4 +1,15 @@
-# syntax=docker/dockerfile:1
-FROM scratch
-ADD hello /
-CMD ["/hello"]
+# Use the official Ubuntu as the base image
+FROM ubuntu:latest
+
+# Set the maintainer label
+LABEL maintainer="your-email@example.com"
+
+# Update package lists and install any desired packages
+RUN apt-get update && apt-get install -y nginx
+
+# Expose port 80 to allow access to the Nginx web server
+EXPOSE 80
+
+# Set the default command to run when a container starts
+CMD ["nginx", "-g", "daemon off;"]
+
